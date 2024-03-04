@@ -5,11 +5,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 10f;
+    public float sprint = 10f;
     public float gravity = 9.8f;
     private float _fallVelocity;
     public float jumpForce;
     private CharacterController ck;
     private Vector3 _moveVector;
+    private float currentSpeed;
+
     void Start()
     {
         ck = GetComponent<CharacterController>();
@@ -47,11 +50,16 @@ public class PlayerController : MonoBehaviour
             _fallVelocity = -jumpForce;
         }
 
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            currentSpeed = speed + sprint;
+        }
+        else { currentSpeed = speed;  }
     }
 
     void FixedUpdate()
     {
-        ck.Move(_moveVector* speed *Time.fixedDeltaTime);
+        ck.Move(_moveVector* currentSpeed * Time.fixedDeltaTime);
         _fallVelocity += gravity * Time.fixedDeltaTime;
         ck.Move(Vector3.down* _fallVelocity * Time.fixedDeltaTime);
 
