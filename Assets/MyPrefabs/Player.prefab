@@ -59,6 +59,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPoint: {fileID: 9217203523852434841}
+  cameraLink: {fileID: 3644690043084405606}
+  targetInSkyDistance: 100
 --- !u!1 &3644690043084405604
 GameObject:
   m_ObjectHideFlags: 0

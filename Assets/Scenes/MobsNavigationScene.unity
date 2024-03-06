@@ -703,7 +703,8 @@ PrefabInstance:
       propertyPath: sprint
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5509402489003667993, guid: 60e4203cf803bd94b9fb4657fe7f7554, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 60e4203cf803bd94b9fb4657fe7f7554, type: 3}
 --- !u!1 &1110977779
 GameObject:
@@ -1699,13 +1700,15 @@ GameObject:
   - component: {fileID: 1879178481}
   - component: {fileID: 1879178483}
   - component: {fileID: 1879178482}
+  - component: {fileID: 1879178484}
+  - component: {fileID: 1879178485}
   m_Layer: 0
   m_Name: Zlodiy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1879178481
 Transform:
   m_ObjectHideFlags: 0
@@ -1765,6 +1768,34 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &1879178484
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879178480}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 1.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.7, z: 0}
+--- !u!114 &1879178485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879178480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f1939ad9e60bbb40a7dac9e00af3e80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 100
+  _fireballDamage: {fileID: 0}
 --- !u!1 &1886113311
 GameObject:
   m_ObjectHideFlags: 0
