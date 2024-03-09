@@ -5,6 +5,7 @@ using UnityEngine;
 public class FireballCaster : MonoBehaviour
 {
     public Fireball fireballPrefab;
+    public Transform fireballSourceTransform;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,7 @@ public class FireballCaster : MonoBehaviour
 
     private void FireFly()
     {
-        Instantiate(fireballPrefab, transform.position, transform.rotation );
+        Instantiate(fireballPrefab, fireballSourceTransform.position, fireballSourceTransform.rotation);
         
     }
 }
