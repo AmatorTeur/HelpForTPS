@@ -102,7 +102,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.5826, y: 1.274, z: -0.005}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 3166797869716606883}
   m_Father: {fileID: 3644690044416562099}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -508,6 +509,7 @@ GameObject:
   - component: {fileID: 3644690044416562098}
   - component: {fileID: 3644690044416562108}
   - component: {fileID: 116376188167881707}
+  - component: {fileID: 7511559493593901475}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -581,7 +583,7 @@ CharacterController:
   m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.01
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!114 &3644690044416562108
@@ -600,6 +602,7 @@ MonoBehaviour:
   _currentValue: 100
   gameplayUI: {fileID: 2932242523523462506}
   gameOverScreen: {fileID: 4514377892704032049}
+  animator: {fileID: 0}
 --- !u!114 &116376188167881707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -615,6 +618,21 @@ MonoBehaviour:
   fireballPrefab: {fileID: 2102166497924820226, guid: 44c2de3a38b0e724fb5070a4f79175fc,
     type: 3}
   fireballSourceTransform: {fileID: 8206618737279524037}
+--- !u!114 &7511559493593901475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3644690044416562097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6edc2963acd3cc242a1efc2d559e744b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grenadePrefab: {fileID: 8574170376327017605, guid: 5e287f359423fc5478a3ed90107f5603,
+    type: 3}
+  grenadeSourceTransform: {fileID: 3166797869716606883}
 --- !u!1 &4514377892704032049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,6 +1159,36 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &8609999364050040122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3166797869716606883}
+  m_Layer: 0
+  m_Name: GrenadeCaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3166797869716606883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8609999364050040122}
+  m_LocalRotation: {x: -0.13052624, y: 0, z: 0, w: 0.9914449}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8206618737279524037}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -15, y: 0, z: 0}
 --- !u!1001 &3644690042965542329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1212,7 +1260,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9100000, guid: 4f832b47b4d56444fa750ff8180a15a9, type: 2}
     - target: {fileID: 5866666021909216657, guid: fb7454df0bbeb5e44af42a494b958c0c,
         type: 3}
       propertyPath: m_WarningMessage
